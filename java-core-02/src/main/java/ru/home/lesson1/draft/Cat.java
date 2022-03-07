@@ -1,4 +1,4 @@
-package ru.home.lesson1;
+package ru.home.lesson1.draft;
 
 public class Cat {
     private String color;
@@ -30,5 +30,9 @@ public class Cat {
     @Override
     public String toString() {
         return String.format("%s %d", color, age);
+    }
+
+    public void meow() {
+        System.out.println(color + " : meow");
     }
 }
