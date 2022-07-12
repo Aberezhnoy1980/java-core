@@ -14,6 +14,8 @@
         <module>spring-01</module>
         <module>java-core-03</module>
         <module>java-core-02</module>
+        <module>Stream-API</module>
+        <module>Shildt</module>
     </modules>
 
     <properties>
