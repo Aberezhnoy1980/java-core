@@ -1,8 +1,8 @@
-package ru.home;
+package ru.home.other;
 
 import java.util.Scanner;
 
-class Example {
+class CharEncStand {
     public static void main(String[] args) {
 //        sayHello();
         asciiDecode();

@@ -1,8 +1,6 @@
-package ru.home;
+package ru.home.numberSystems;
 
 import java.util.Arrays;
-
-import static ru.home.NumberSystems.NumberType.*;
 
 public class NumberSystems {
     public enum NumberType {
@@ -10,7 +8,7 @@ public class NumberSystems {
     }
 
     public static void main(String[] args) {
-        binToDec(new int[]{0, 0, 0, 0, 1, 0, 1, 0});
+        binToDec(new int[]{0, 0, 0, 1, 1, 1, 0, 1});
         decToBin(29);
     }
 

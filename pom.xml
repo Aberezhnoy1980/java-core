@@ -16,6 +16,7 @@
         <module>java-core-02</module>
         <module>Stream-API</module>
         <module>Shildt</module>
+        <module>Object-Oriented-Programming</module>
     </modules>
 
     <properties>
