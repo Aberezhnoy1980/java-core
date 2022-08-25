@@ -8,8 +8,8 @@ public class NumberSystems {
     }
 
     public static void main(String[] args) {
-        binToDec(new int[]{0, 0, 0, 1, 1, 1, 0, 1});
-        decToBin(29);
+        binToDec(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1});
+        decToBin(-134);
     }
 
     public static void decToBin(long decNumber) {
