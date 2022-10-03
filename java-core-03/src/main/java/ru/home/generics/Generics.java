@@ -1,4 +1,4 @@
-package ru.home.lesson1;
+package ru.home.generics;
 
 public class Generics {
 

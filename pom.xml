@@ -17,6 +17,7 @@
         <module>Stream-API</module>
         <module>Shildt</module>
         <module>Object-Oriented-Programming</module>
+        <module>JADS</module>
     </modules>
 
     <properties>
