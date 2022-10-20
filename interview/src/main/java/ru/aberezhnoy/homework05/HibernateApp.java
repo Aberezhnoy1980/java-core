@@ -1,7 +1,6 @@
 package ru.aberezhnoy.homework05;
 
 import org.hibernate.Session;
-import ru.aberezhnoy.homework05.dao.SessionFactoryBuilder;
 import ru.aberezhnoy.homework05.dao.StudentDao;
 import ru.aberezhnoy.homework05.dao.StudentDaoImpl;
 import ru.aberezhnoy.homework05.persist.Student;

@@ -1,6 +1,7 @@
 package ru.aberezhnoy.homework05.dao;
 
 import org.hibernate.Session;
+import ru.aberezhnoy.homework05.SessionFactoryBuilder;
 import ru.aberezhnoy.homework05.persist.Student;
 
 import java.util.List;
@@ -47,7 +48,7 @@ public class StudentDaoImpl implements StudentDao<Student, Long> {
     }
 
     private void executeInTransaction(Consumer<Session> consumer) {
-        Session session = SessionFactoryBuilder.getSessionFactory().getCurrentSession();
+        Session session = SessionFactoryBuilder.getInstance().getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
             consumer.accept(session);
@@ -62,7 +63,7 @@ public class StudentDaoImpl implements StudentDao<Student, Long> {
     }
 
     private <R> R executeForSession(Function<Session, R> function) {
-        try (Session session = SessionFactoryBuilder.getSessionFactory().openSession()) {
+        try (Session session = SessionFactoryBuilder.getInstance().getSessionFactory().openSession()) {
             return function.apply(session);
         }
     }
