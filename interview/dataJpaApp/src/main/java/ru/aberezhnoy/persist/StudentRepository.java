@@ -11,7 +11,6 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Repository;
 import ru.aberezhnoy.persist.model.Student;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 @Repository
