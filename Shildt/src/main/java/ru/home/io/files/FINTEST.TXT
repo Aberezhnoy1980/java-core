@@ -1,0 +1,3 @@
+this text was copied from another file and append to exist text
+This becomes possible when we add the boolean value true to the parameter "append"
+in FileOutputStream class constructor when instantiated

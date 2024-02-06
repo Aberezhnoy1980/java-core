@@ -1,0 +1,10 @@
+DEBUG 2023-05-26 17:10:10 [main] ru.home.logging.LogExample (LogExample.java:16) - Debug
+INFO  2023-05-26 17:10:10 [main] ru.home.logging.LogExample (LogExample.java:17) - Info
+INFO  2023-05-26 17:10:10 [main] ru.home.logging.LogExample (LogExample.java:18) - String: Hello world
+WARN  2023-05-26 17:10:10 [main] ru.home.logging.LogExample (LogExample.java:19) - Warning
+ERROR 2023-05-26 17:10:10 [main] ru.home.logging.LogExample (LogExample.java:20) - Error
+FATAL 2023-05-26 17:10:10 [main] ru.home.logging.LogExample (LogExample.java:21) - Fatal
+ERROR 2023-05-26 17:10:10 [main] ru.home.logging.LogExample (LogExample.java:29) - Throwing
+java.lang.RuntimeException: какая та шляпа внезапно приключилась блять
+	at ru.home.logging.LogExample.exception(LogExample.java:27) [classes/:?]
+	at ru.home.logging.LogExample.main(LogExample.java:22) [classes/:?]
