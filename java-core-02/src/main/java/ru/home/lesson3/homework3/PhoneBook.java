@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class PhoneBook {
-    private Map<String, Set<String>> phones;
+    private final Map<String, Set<String>> phones;
 
     public PhoneBook() {
         this.phones = new HashMap<>();

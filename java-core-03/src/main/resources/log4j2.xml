@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--read documentation!!!!!!!!!!!!!!-->
+<Configuration>
+    <Properties>
+        <Property name="basePath">java-core-03/logs</Property>
+    </Properties>
+
+    <Appenders>
+        <File name="FILE1" fileName="${basePath}/logfile1.log" append="true">
+            <PatternLayout pattern="%-5p %d{yyyy-MM-dd HH:mm:ss} [%t] %C (%F:%L) - %m%n"/>
+        </File>
+
+        <File name="FILE2" fileName="${basePath}/logfile2.log" append="true">
+            <PatternLayout pattern="%-5p %d{yyyy-MM-dd HH:mm:ss} [%t] %C (%F:%L) - %m%n"/>
+        </File>
+
+        <File name="FILE3" fileName="${basePath}/logfile3.txt" append="true">
+            <PatternLayout pattern="%-5p %d{yyyy-MM-dd HH:mm:ss} [%t] %C (%F:%L) - %m%n"/>
+        </File>
+
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%-5p %d{yyyy-MM-dd HH:mm:ss} [%t] %C:%L (%F:%L) - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="fatal">
+<!--            <AppenderRef ref="STDOUT"/>-->
+<!--            <AppenderRef ref="FILE1"/>-->
+        </Root>
+        <Logger name="ru.home.logging.LogExample" level="debug">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="FILE3"/>
+        </Logger>
+        <logger name="ru.home.logging.StableModule" level="error"/>
+    </Loggers>
+</Configuration>

@@ -5,12 +5,10 @@ import java.util.Map;
 
 public class Multiton {
 
-    private static Map instances = new HashMap();
-
-    private static Multiton multitonInstance = null;
+    private static final Map<String, Multiton> instances = new HashMap<>();
 
     public static Multiton getInstance(String key) {
-        multitonInstance = (Multiton) instances.get(key);
+        Multiton multitonInstance = instances.get(key);
         if (multitonInstance == null) {
             multitonInstance = new Multiton();
             instances.put(key, multitonInstance);

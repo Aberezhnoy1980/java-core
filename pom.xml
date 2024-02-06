@@ -19,6 +19,7 @@
         <module>Object-Oriented-Programming</module>
         <module>JADS</module>
         <module>interview</module>
+        <module>dataJpaApp</module>
     </modules>
 
     <properties>

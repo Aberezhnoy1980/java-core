@@ -5,15 +5,11 @@ public class Box {
     double height;
     double depth;
 
-    Box() {
+    Box(Box ob) {
+        width = ob.width;
+        height = ob.height;
+        depth = ob.depth;
     }
-
-//    Box(double w, double h, double d) {
-//        System.out.println("Box object construction with width x height x depth: " + w + " x " + h + " x " + d);
-//        width = w;
-//        height = h;
-//        depth = d;
-//    }
 
     Box(double width, double height, double depth) {
         this.width = width;
@@ -21,6 +17,15 @@ public class Box {
         this.depth = depth;
     }
 
+    Box() {
+        width = -1;
+        height = -1;
+        depth = -1;
+    }
+
+    Box(double len) {
+        width = height = depth = len;
+    }
     void printVolume() {
         System.out.println(this + " volume is " + width * height * depth);
     }

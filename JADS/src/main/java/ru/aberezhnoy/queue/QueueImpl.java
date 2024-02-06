@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class QueueImpl<T> implements Queue<T> {
 
     private final int maxSize;
-    private T[] queue;
+    private final T[] queue;
     private int front;
     private int rear;
     private int items;

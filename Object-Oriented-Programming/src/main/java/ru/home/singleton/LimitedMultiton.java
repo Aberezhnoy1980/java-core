@@ -7,15 +7,15 @@ public class LimitedMultiton {
 
     public enum Count {
 
-        ONE, TWO, TREE;
+        ONE, TWO, TREE
     }
 
-    private static Map instances = new HashMap();
+    private static final Map<Count, LimitedMultiton> instances = new HashMap<>();
 
     private static LimitedMultiton limitedMultitonInstance = null;
 
-    public static LimitedMultiton getInstance(Enum key) {
-        limitedMultitonInstance = (LimitedMultiton) instances.get(key);
+    public static LimitedMultiton getInstance(Count key) {
+        limitedMultitonInstance = instances.get(key);
         if (limitedMultitonInstance == null) {
             limitedMultitonInstance = new LimitedMultiton();
             instances.put(key, limitedMultitonInstance);

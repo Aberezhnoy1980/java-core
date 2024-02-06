@@ -11,7 +11,7 @@ public class MainApp {
 
 //        beanList.postProcessBeanFactory();
 
-         final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap();
+         final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
         System.out.println(beanDefinitionMap);
     }
 }

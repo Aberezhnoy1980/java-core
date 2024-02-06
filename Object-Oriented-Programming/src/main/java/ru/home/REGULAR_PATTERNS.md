@@ -674,7 +674,7 @@ $hunter->hunt($wildDogAdapter);
 🚡 Bridge
 ------
 Real world example
-> Consider you have a website with different pages and you are supposed to allow the user to change the theme. What would you do? Create multiple copies of each of the pages for each of the themes or would you just create separate theme and load them based on the user's preferences? Bridge pattern allows you to do the second i.e.
+> Consider you have a website with different pages and you are supposed to allow the nonStaticUser to change the theme. What would you do? Create multiple copies of each of the pages for each of the themes or would you just create separate theme and load them based on the nonStaticUser's preferences? Bridge pattern allows you to do the second i.e.
 
 ![With and without the bridge pattern](https://cloud.githubusercontent.com/assets/11269635/23065293/33b7aea0-f515-11e6-983f-98823c9845ee.png)
 
@@ -1508,7 +1508,7 @@ Command pattern can also be used to implement a transaction based system. Where 
 --------
 
 Real world example
-> An old radio set will be a good example of iterator, where user could start at some channel and then use next or previous buttons to go through the respective channels. Or take an example of MP3 player or a TV set where you could press the next and previous buttons to go through the consecutive channels or in other words they all provide an interface to iterate through the respective channels, songs or radio stations.  
+> An old radio set will be a good example of iterator, where nonStaticUser could start at some channel and then use next or previous buttons to go through the respective channels. Or take an example of MP3 player or a TV set where you could press the next and previous buttons to go through the consecutive channels or in other words they all provide an interface to iterate through the respective channels, songs or radio stations.  
 
 In plain words
 > It presents a way to access the elements of an object without exposing the underlying presentation.
@@ -1631,16 +1631,16 @@ First of all, we have the mediator i.e. the chat room
 ```php
 interface ChatRoomMediator 
 {
-    public function showMessage(User $user, string $message);
+    public function showMessage(User $nonStaticUser, string $message);
 }
 
 // Mediator
 class ChatRoom implements ChatRoomMediator
 {
-    public function showMessage(User $user, string $message)
+    public function showMessage(User $nonStaticUser, string $message)
     {
         $time = date('M d, y H:i');
-        $sender = $user->getName();
+        $sender = $nonStaticUser->getName();
 
         echo $time . '[' . $sender . ']:' . $message;
     }

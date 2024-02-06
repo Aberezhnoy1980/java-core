@@ -118,8 +118,8 @@ public class Generics {
     }
 
     private static class TwoGen<T, V> {
-        private T object1;
-        private V object2;
+        private final T object1;
+        private final V object2;
 
         public TwoGen(T object1, V object2) {
             this.object1 = object1;
@@ -142,16 +142,17 @@ public class Generics {
     }
 
     private static class Stats<T extends Number> {
-        private T[] numbers;
+        private final T[] numbers;
 
+        @SafeVarargs
         public Stats(T... numbers) {
             this.numbers = numbers;
         }
 
         public double avg() {
             double sum = 0.0;
-            for (int i = 0; i < numbers.length; i++) {
-                sum += numbers[i].doubleValue();
+            for (T number : numbers) {
+                sum += number.doubleValue();
             }
             return sum / numbers.length;
         }

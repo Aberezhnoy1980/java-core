@@ -352,7 +352,7 @@ public class StreamAPIMain {
 //        }
 //        final Optional<String> optional = Optional.of(excTest);
 //        optional.map(String::length).ifPresent(System.out::println);
-//        if(optional.isPresent())
+//        if(optional.orElse())
 //        optional.get();
 
         Arrays.stream(new int[] {1, 2, 3, 4, 5}).filter(i -> i < 4).findAny().ifPresent(System.out::print);
